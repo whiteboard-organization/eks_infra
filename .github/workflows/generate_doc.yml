@@ -40,6 +40,7 @@ jobs:
         with:
           repository: whiteboard-organization/watsonX-ai.git
           path: watson
+          ref: hackathon/rt-01
 
       - name: Set up Python
         uses: actions/setup-python@v4
