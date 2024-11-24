@@ -56,7 +56,7 @@ jobs:
 
       - name: Run Python script
         run: |
-          ls watson/
+          ls watson/watson/
           pwd
           #python watson/watson/watson.py
           # Adjust path if necessary
