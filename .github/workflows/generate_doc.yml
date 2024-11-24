@@ -53,6 +53,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install ibm_watsonx_ai
           pip install ibm_watson_machine_learning
+          pip install pandas --upgrade
 
       - name: Run Python script
         run: |
