@@ -58,5 +58,5 @@ jobs:
         run: |
           ls watson/watson/
           pwd
-          #python watson/watson/main.py
+          python watson/watson/main.py
           # Adjust path if necessary
