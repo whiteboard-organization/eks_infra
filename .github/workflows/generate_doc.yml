@@ -41,6 +41,7 @@ jobs:
           repository: whiteboard-organization/watsonX-ai.git
           path: watson
           ref: hackathon/rt-01
+          token: ${{ secrets.MY_GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v4
