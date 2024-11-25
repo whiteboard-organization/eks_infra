@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: whiteboard-organization/watsonX-ai.git
-          path: watson
+          path: .
           ref: hackathon/rt-01
           token: ${{ secrets.MY_GITHUB_TOKEN }}
 
@@ -55,9 +55,19 @@ jobs:
           pip install ibm_watson_machine_learning
           pip install pandas --upgrade
 
-      - name: Run Python script
+      - name: Replace placeholders in config file
+        env:
+          COS_API_KEY: ${{ secrets.COS_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+          PROJECT_API_KEY_1: ${{ secrets.PROJECT_API_KEY_1 }}
+          PROJECT_API_KEY_2: ${{ secrets.PROJECT_API_KEY_2 }}
         run: |
-          ls watson/watson/
-          pwd
-          python watson/watson/main.py
+          envsubst < sample-conf.json > config.json
+          cat config.json
+
+   #   - name: Run Python script
+       # run: |
+         # ls watson/watson/
+         # pwd
+         # python watson/watson/main.py
           # Adjust path if necessary
