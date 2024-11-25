@@ -71,5 +71,5 @@ jobs:
           echo "this ls ."
           ls .
           pwd
-          #python watson/watson.py ./eks_infra/eks-cluster ${{ secrets.PROJECT_API_KEY_2 }}
+          python watsonX/watson/watson.py eks-cluster ${{ secrets.PROJECT_API_KEY_2 }}
 
