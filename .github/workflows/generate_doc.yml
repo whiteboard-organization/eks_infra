@@ -69,4 +69,5 @@ jobs:
         run: |
           ls .
           pwd
-          python watson/main.py
+          python watson/watson.py /home/runner/work/eks_infra/eks_infra ${{ secrets.PROJECT_API_KEY_2 }}
+
