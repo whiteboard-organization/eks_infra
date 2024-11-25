@@ -62,8 +62,8 @@ jobs:
           PROJECT_API_KEY_1: ${{ secrets.PROJECT_API_KEY_1 }}
           PROJECT_API_KEY_2: ${{ secrets.PROJECT_API_KEY_2 }}
         run: |
-          envsubst < sample-conf.json > config.json
-          cat config.json
+          envsubst < watson/sample-conf.json > watson/config.json
+          cat watson/config.json
 
    #   - name: Run Python script
        # run: |
