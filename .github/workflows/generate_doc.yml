@@ -67,7 +67,12 @@ jobs:
 
       - name: Run Python script
         run: |
+          echo "this ls ."
           ls .
+          echo "ls /////"
+          ls /home/runner/work/eks_infra/eks_infra
+          echo "ls eks infra infra"
+          ls ./eks_infra/eks_infra
           pwd
-          python watson/watson.py /home/runner/work/eks_infra/eks-cluster ${{ secrets.PROJECT_API_KEY_2 }}
+          #python watson/watson.py ./eks_infra/eks-cluster ${{ secrets.PROJECT_API_KEY_2 }}
 
