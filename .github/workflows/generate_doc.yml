@@ -82,7 +82,7 @@ jobs:
           ls .
           pwd
           python watsonX/watson/watson.py eks-cluster ${{ secrets.PROJECT_API_KEY_2 }}
-          ls /home/runner/work/eks_infra/eks_infra/watsonX/watson/../generated-docs/
+          ls /home/runner/work/eks_infra/eks_infra/watsonX/watson/../docs/
 
       - name: Install techdocs-cli
         run: sudo npm install -g @techdocs/cli
