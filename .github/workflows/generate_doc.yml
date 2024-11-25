@@ -65,9 +65,8 @@ jobs:
           envsubst < watson/sample-conf.json > watson/config.json
           cat watson/config.json
 
-   #   - name: Run Python script
-       # run: |
-         # ls watson/watson/
-         # pwd
-         # python watson/watson/main.py
-          # Adjust path if necessary
+      - name: Run Python script
+        run: |
+          ls watson/
+          pwd
+          python watson/main.py
