@@ -63,17 +63,13 @@ jobs:
           PROJECT_API_KEY_1: ${{ secrets.PROJECT_API_KEY_1 }}
           PROJECT_API_KEY_2: ${{ secrets.PROJECT_API_KEY_2 }}
         run: |
-          envsubst < watson/sample-conf.json > watson/config.json
-          cat watson/config.json
+          envsubst < watsonX/watson/sample-conf.json > watson/config.json
+          cat watsonX/watson/config.json
 
       - name: Run Python script
         run: |
           echo "this ls ."
           ls .
-          echo "ls /////"
-          ls /home/runner/work/eks_infra/eks_infra
-          echo "ls eks infra infra"
-          echo $GITHUB_WORKSPACE
           pwd
           #python watson/watson.py ./eks_infra/eks-cluster ${{ secrets.PROJECT_API_KEY_2 }}
 
