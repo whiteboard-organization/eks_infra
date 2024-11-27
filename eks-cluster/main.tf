@@ -36,7 +36,7 @@ module "eks" {
   # EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
     ami_type       = "AL2_x86_64"
-    instance_types = ["t3.micro"]
+    instance_types = ["t3.small"]
 
     attach_cluster_primary_security_group = true
   }
@@ -44,10 +44,10 @@ module "eks" {
   eks_managed_node_groups = {
     whiteboard-cluster-wg = {
       min_size     = 1
-      max_size     = 2
-      desired_size = 2
+      max_size     = 3
+      desired_size = 3
 
-      instance_types = ["t3.micro"]
+      instance_types = ["t3.small"]
       capacity_type  = "SPOT"
 
       tags = {
