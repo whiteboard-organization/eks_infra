@@ -24,7 +24,7 @@ jobs:
         with:
           repository: whiteboard-organization/watsonX-ai.git
           path: watsonX
-          ref: hackathon/rt-01
+          ref: hackathon/oa-02
           token: ${{ secrets.MY_GITHUB_TOKEN }}
 
       - name: Set up Python
@@ -51,7 +51,7 @@ jobs:
 
       - name: Run Python script
         run: |
-          python watsonX/watson/watson.py eks-cluster ${{ secrets.PROJECT_API_KEY_2 }}
+          python watsonX/watson/watson.py eks-cluster ${{ secrets.PROJECT_API_KEY_3 }}
           ls /home/runner/work/eks_infra/eks_infra/watsonX/
 
       - name: Install techdocs-cli
