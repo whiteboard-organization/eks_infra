@@ -24,7 +24,7 @@ jobs:
         with:
           repository: whiteboard-organization/watsonX-ai.git
           path: watsonX
-          ref: hackathon/rt-01/6dfe743
+          ref: 6dfe7437567503e5ad72ddc952c7c5a85fa0de11
           token: ${{ secrets.MY_GITHUB_TOKEN }}
           fetch-depth: 0
 
