@@ -66,4 +66,4 @@ jobs:
         run: techdocs-cli generate --no-docker --verbose --source-dir /home/runner/work/eks_infra/eks_infra/watsonX
 
       - name: Publish docs site
-        run: techdocs-cli publish --publisher-type awsS3 --storage-name ${{TECHDOCS_S3_BUCKET_NAME}}  --directory /home/runner/work/eks_infra/eks_infra/site
+        run: techdocs-cli publish --publisher-type awsS3 --storage-name backstage-compiled-docs  --directory /home/runner/work/eks_infra/eks_infra/site
