@@ -13,6 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TECHDOCS_S3_BUCKET_NAME: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       ENTITY_NAMESPACE: 'default'
       ENTITY_KIND: 'Component'
       ENTITY_NAME: 'my-doc-entity'
@@ -66,4 +68,4 @@ jobs:
         run: techdocs-cli generate --no-docker --verbose --source-dir /home/runner/work/eks_infra/eks_infra/watsonX
 
       - name: Publish docs site
-        run: techdocs-cli publish --publisher-type awsS3 --storage-name backstage-compiled-docs  --directory /home/runner/work/eks_infra/eks_infra/site
+        run: techdocs-cli publish --publisher-type awsS3 --storage-name $TECHDOCS_S3_BUCKET_NAME  --directory /home/runner/work/eks_infra/eks_infra/site
