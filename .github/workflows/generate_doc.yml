@@ -12,10 +12,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      TECHDOCS_S3_BUCKET_NAME: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}
-      ENTITY_NAMESPACE: 'default'
+      TECHDOCS_S3_BUCKET_NAME: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}`
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: 'eu-north-1'
+      ENTITY_NAMESPACE: 'eks-infra'
       ENTITY_KIND: 'Component'
-      ENTITY_NAME: 'my-doc-entity'
+      ENTITY_NAME: 'eks-cluster'
     steps:
       - uses: actions/checkout@v4
 
